@@ -10,7 +10,7 @@ export default defineConfig({
     jsxFactory: 'h',
     jsxFragment: 'Fragment'
   },
-  plugins: [, vue(), vueJsx(), ],
+  plugins: [vue(), vueJsx()],
   build: {
     lib: {
       name: 'fuji-lib',
@@ -34,5 +34,5 @@ export default defineConfig({
     target: 'esnext',
     // Leave minification up to applications.
     minify: true,
-  },
+  }
 })
