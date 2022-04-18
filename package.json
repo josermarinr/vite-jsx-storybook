@@ -1,0 +1,38 @@
+{
+  "name": "fuji-lib",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.2",
+    "vue-tsc": "^0.29.8",
+    "vuepress": "^2.0.0-beta.39"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.25"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./fuji-lib.umd.js",
+  "module": "./fuji-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./fuji-lib.es.js",
+      "require": "./fuji-lib.umd.js"
+    }
+  }
+}
