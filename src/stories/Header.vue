@@ -29,19 +29,19 @@
         <h1>Acme</h1>
       </div>
       <div>
-        <my-button
+        <Button
           v-if="user"
           size="small"
           label="Log out"
           @click="$emit('logout')"
         />
-        <my-button
+        <Button
           v-if="!user"
           size="small"
           label="Log in"
           @click="$emit('login')"
         />
-        <my-button
+        <Button
           v-if="!user"
           primary
           size="small"
@@ -55,12 +55,12 @@
 
 <script>
 import './header.css';
-import MyButton from './Button.vue';
+import Button from './../packages/Button/Button';
 
 export default {
   name: 'MyHeader',
 
-  components: { MyButton },
+  components: { Button },
 
   props: {
     user: {

@@ -1,9 +1,9 @@
-import MyButton from './Button.vue';
+import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
-  component: MyButton,
+  component: Button,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -16,36 +16,36 @@ export default {
 };
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
-const Template = (args) => ({
+const Template = (args: any) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { MyButton },
+  components: { Button },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<Button v-bind="args" />',
 });
 
-export const Primary = Template.bind({});
+export const Primary: any = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   primary: true,
   label: 'Button',
 };
 
-export const Secondary = Template.bind({});
+export const Secondary: any = Template.bind({});
 Secondary.args = {
   label: 'Button',
 };
 
-export const Large = Template.bind({});
+export const Large: any = Template.bind({});
 Large.args = {
   size: 'large',
   label: 'Button',
 };
 
-export const Small = Template.bind({});
+export const Small: any = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Button',
