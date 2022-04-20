@@ -1,12 +1,2 @@
-import { App } from 'vue'
-import components from "./App/index"
-
-const plugin = {
-    install (Vue: App) {
-      for (const component in components) {
-          Vue.component(component)
-      }
-    }
-  }
-  
-export default plugin;
+export {default as  Page} from './packages/Page';
+export  {default as HW }from './packages/HelloWorld';

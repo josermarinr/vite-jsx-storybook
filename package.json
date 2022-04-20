@@ -1,10 +1,10 @@
 {
   "name": "fuji-lib",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -54,12 +54,12 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./fuji-lib.umd.js",
-  "module": "./fuji-lib.es.js",
+  "main": "./dist/fuji-lib.umd.js",
+  "module": "./dist/fuji-lib.es.js",
   "exports": {
     ".": {
-      "import": "./fuji-lib.es.js",
-      "require": "./fuji-lib.umd.js"
+      "import": "./dist/fuji-lib.es.js",
+      "require": "./dist/fuji-lib.umd.js"
     }
   }
 }

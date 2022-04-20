@@ -15,7 +15,7 @@ export default defineConfig({
     lib: {
       name: 'fuji-lib',
       entry: resolve(__dirname, 'src/index.tsx'),
-      fileName: (format) => `me-ui.${format}.js`,
+      fileName: (format) => `fuji-lib.${format}.js`,
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
