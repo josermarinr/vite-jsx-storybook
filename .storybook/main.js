@@ -41,6 +41,7 @@ module.exports = {
     // return the customized config
     return mergeConfig(config, {
       // customize the Vite config here
+      base: './',
       plugins: [vue({
         customElement: true
       }), vueJsx()],
