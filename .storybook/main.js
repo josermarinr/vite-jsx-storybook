@@ -44,7 +44,6 @@ module.exports = {
       plugins: [vue({
         customElement: true
       }), vueJsx()],
-      publicDir: ''
     });
   }
   
