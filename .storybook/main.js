@@ -31,6 +31,10 @@ module.exports = {
     return config;
   },
 
+  typescript: {
+    reactDocgen: 'react-docgen'
+  },
+
   async viteFinal(config, {
     configType
   }) {
@@ -39,8 +43,10 @@ module.exports = {
       // customize the Vite config here
       plugins: [vue({
         customElement: true
-      }), vueJsx()]
+      }), vueJsx()],
+      publicDir: ''
     });
   }
+  
 
 };
